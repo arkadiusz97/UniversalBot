@@ -11,7 +11,7 @@ programManager::~programManager()
 bool programManager::loadProxies(QString fileName)
 {
     proxiesList.clear();
-    QRegularExpression re("(.*):(.*)");
+    QRegularExpression re1("(.*):(.*):(.*):(.*)"), re2("(.*):(.*)");
     QFile file(fileName);
     if(!file.exists())
     {
@@ -21,10 +21,19 @@ bool programManager::loadProxies(QString fileName)
     QTextStream stream(&file);
     while(!stream.atEnd())
     {
-        auto match = re.match(stream.readLine());
+        QString line = stream.readLine();
+        auto match = re1.match(line);
         if(match.hasMatch())
         {
-            proxiesList.push_back(QNetworkProxy(QNetworkProxy::HttpProxy, match.captured(1), match.captured(2).toInt(), "", ""));
+            proxiesList.push_back(QNetworkProxy(QNetworkProxy::HttpProxy, match.captured(1), match.captured(2).toInt(), match.captured(3), match.captured(4)));
+        }
+        else
+        {
+            auto match2 = re2.match(line);
+            if(match2.hasMatch())
+            {
+                proxiesList.push_back(QNetworkProxy(QNetworkProxy::HttpProxy, match2.captured(1), match2.captured(2).toInt()));
+            }
         }
     }
     file.close();
