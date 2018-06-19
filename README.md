@@ -1,2 +1,1 @@
-UniversalBot allows send a one specyfied GET/POST request from a many proxy servers. Proxies are saved in file "proxies.txt" in following format: [ip address]:[port]. Program can be used to multiple voting on a site, where you have to send only one request.
-Note: Proxies in example file may be outdated. 
+UniversalBot allows send a one specyfied GET/POST request from a many proxy servers. Proxies are saved in file "proxies.txt" in following format: [host]:[port] or [host]:[port]:[user]:[password]. Program can be used to multiple voting on a site, where you have to send only one request or to the positioning of the page in search engines.
