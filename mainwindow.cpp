@@ -53,7 +53,7 @@ void MainWindow::on_pushButtonStart_clicked()
     {
         ui->textEditContentPost->setEnabled(true);
     }
-    logs += QString("Done. Succesful requests: ") + QString::number(numberOfCurrentRequestsSucces) + QString(" Failed requests: ") + QString::number(numberOfCurrentRequestsError);
+    logs = QString("Done. Succesful requests: ") + QString::number(numberOfCurrentRequestsSucces) + QString(" Failed requests: ") + QString::number(numberOfCurrentRequestsError) + "<br/>" + logs;
     ui->textBrowserLogs->setText(logs);
 }
 void MainWindow::endOfOneRequestSlot(bool succes, QString proxy, quint16 port, int status)
@@ -62,15 +62,15 @@ void MainWindow::endOfOneRequestSlot(bool succes, QString proxy, quint16 port, i
     if(succes)
     {
         ++numberOfCurrentRequestsSucces;
-        statusMsg = " succes";
+        statusMsg = R"( <font color="green">succes</font>)";
     }
     else
     {
         ++numberOfCurrentRequestsError;
-        statusMsg = " error";
+        statusMsg = R"( <font color="red">error</font>)";
     }
-    logs += QString("Proxy: ") + proxy + QString(" Port: ") + QString::number(port) + statusMsg + QString(" (status ") + QString::number(status) + QString(") ") + QString::number(numberOfCurrentRequestsSucces+numberOfCurrentRequestsError) + QString("/") + QString::number(instance.numberOfProxies()) + QString("\n");
-    ui->textBrowserLogs->setText(logs);
+    logs = QString("Proxy: <b>") + proxy + QString("</b> Port: <b>") + QString::number(port) + "</b>" + statusMsg + QString(" (status ") + QString::number(status) + QString(") ") + QString::number(numberOfCurrentRequestsSucces + numberOfCurrentRequestsError) + QString("/") + QString::number(instance.numberOfProxies()) + QString("<br\>") + logs;
+    ui->textBrowserLogs->setHtml(logs);
 }
 
 void MainWindow::showAboutWindow()
