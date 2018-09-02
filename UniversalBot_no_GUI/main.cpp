@@ -1,7 +1,6 @@
 #include <QCoreApplication>
 #include <QObject>
 #include <QDebug>
-#include <functional>
 #include "programManager.h"
 
 unsigned numberOfCurrentRequestsSucces = 0, numberOfCurrentRequestsError = 0;
