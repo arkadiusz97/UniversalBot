@@ -6,7 +6,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    this->setFixedSize(this->width(), this->height());
     connect(&instance, SIGNAL(endOfOneRequest(bool, QString, quint16, int)), this, SLOT(endOfOneRequestSlot(bool, QString, quint16, int)));
     connect(ui->actionAbout, SIGNAL(triggered(bool)), this, SLOT(showAboutWindow()));
 }
