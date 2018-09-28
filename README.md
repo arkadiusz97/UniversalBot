@@ -8,3 +8,6 @@ Program can be used to multiple voting on a site, where you have to send only on
 # Requirements.
 To build and run this program, you need a libary Qt 5.11 and operating system Windows 7/8/10 or GNU/Linux. 
 Program was tested under MinGW compiler on Windows and under GCC 64-bit on Linux(Ubuntu 18.04.1 LTS).
+
+# Screenshots
+![Window](https://raw.githubusercontent.com/arkadiusz97/UniversalBot/master/screenshots/Window.png)
