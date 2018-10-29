@@ -12,5 +12,8 @@ Program was tested under MinGW compiler on Windows and under GCC 64-bit on Linux
 # Screenshots
 ![Window](https://raw.githubusercontent.com/arkadiusz97/UniversalBot/master/screenshots/Window.png)
 
+# Responsibility for using
+I will not be responsible for illegal usage this program. You are using it for own responsibility.
+
 # Download
 Download the newest version for Microsoft Windows 7, 8 and 10: https://github.com/arkadiusz97/UniversalBot/releases/download/1.0/UniversalBot.zip
