@@ -3,7 +3,9 @@
 
 #include <QMainWindow>
 #include <QMessageBox>
+#include <QFileDialog>
 #include "programManager.h"
+#include "settingswindow.h"
 namespace Ui {
 class MainWindow;
 }
@@ -19,18 +21,18 @@ public:
 private slots:
 
     void on_checkBoxGetPost_clicked(bool checked);
-
     void on_pushButtonStart_clicked();
-
-    void endOfOneRequestSlot(bool succes, QString proxy, quint16 port, int status);
-
+    void endOfOneRequestSlot(bool succes, QString proxy, quint16 port, int status, int numberOfCurrentRequestsSucces, int numberOfCurrentRequestsError, QString dateTime);
     void showAboutWindow();
+    void exportResults();
+    void openSettingsWindow();
+    void setDataInInstance(int timeout);
 private:
     Ui::MainWindow *ui;
     programManager instance;
-    int numberOfCurrentRequestsSucces, numberOfCurrentRequestsError;
     bool paused;
-    QString logs;
+    QString logs, settingsFileName, version;
+    settingsWindow settingsW;
 };
 
 #endif // MAINWINDOW_H

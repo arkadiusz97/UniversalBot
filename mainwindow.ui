@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>802</width>
-    <height>747</height>
+    <width>918</width>
+    <height>651</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -59,16 +59,38 @@
      </widget>
     </item>
     <item>
-     <widget class="QLabel" name="labelPostContent">
-      <property name="font">
-       <font>
-        <pointsize>16</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Content of post request:</string>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QLabel" name="labelPostContent">
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Content of post request:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButtonStart">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>16</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>START</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item>
      <widget class="QTextEdit" name="textEditContentPost">
@@ -79,24 +101,6 @@
        <font>
         <pointsize>16</pointsize>
        </font>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButtonStart">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>16</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>START</string>
       </property>
      </widget>
     </item>
@@ -116,7 +120,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>802</width>
+     <width>918</width>
      <height>21</height>
     </rect>
    </property>
@@ -124,6 +128,8 @@
     <property name="title">
      <string>menu</string>
     </property>
+    <addaction name="actionExportResults"/>
+    <addaction name="actionSettings"/>
     <addaction name="actionAbout"/>
    </widget>
    <addaction name="menumenu"/>
@@ -131,6 +137,16 @@
   <action name="actionAbout">
    <property name="text">
     <string>About</string>
+   </property>
+  </action>
+  <action name="actionExportResults">
+   <property name="text">
+    <string>Export results</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>Settings</string>
    </property>
   </action>
  </widget>
