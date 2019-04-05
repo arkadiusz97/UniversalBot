@@ -7,7 +7,7 @@ You can set timeout and export results to HTML report.
 Program can be used for example to validate proxy servers.
 
 # Requirements.
-To build and run this program, you need a libary Qt 5.12 and operating system Windows 7/10 or GNU/Linux. I have unknow problem to run this application under Windows 8. Program was tested under MinGW compiler on Windows and under GCC 64-bit on Linux(Ubuntu 18.04.1 LTS).
+To build and run this program, you need a libary Qt 5.12.2 and operating system Windows 7/8/10 or GNU/Linux. Program was tested under MinGW compiler on Windows and under GCC 64-bit on Linux(Ubuntu 18.04.1 LTS).
 
 # Responsibility for using
 I will not be responsible for illegal usage this program. You are using it for own responsibility.
@@ -17,4 +17,4 @@ I will not be responsible for illegal usage this program. You are using it for o
 ![Settings](https://github.com/arkadiusz97/UniversalBot/blob/master/screenshots/2.png)
 
 # Download
-Download the latest version for Microsoft Windows 7 and 10: https://github.com/arkadiusz97/UniversalBot/releases/download/1.1/UniversalBot_1.1.zip
+Download the latest version for Microsoft Windows 7, 8 and 10(32/64-bit): https://github.com/arkadiusz97/UniversalBot/releases/download/1.1/bin_UniversalBot.zip
